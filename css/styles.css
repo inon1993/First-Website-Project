@@ -62,15 +62,51 @@ a.category-link:hover {
   color: #00BD9D;
 }
 
+.carousel-caption {
+  position: absolute;
+  top: 30%;
+  /* bottom: 50%; */
+}
+
+.banner-text {
+  font-size: 4rem;
+  font-family: 'Paytone One', sans-serif;
+  color: white;
+}
+
+.banner-btn {
+  margin: 10px;
+  font-family: 'Paytone One', sans-serif;
+}
+
+span {
+  background: -webkit-linear-gradient(#00996D, #1BF2CE, #08C7E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 770px) {
+  .banner-text {
+    font-size: 2rem;
+  }
+  .banner-btn {
+    font-size: 1rem;
+  }
+}
+
+.carousel-item {
+  max-height: 100vh;
+}
+
 .products {
   position: absolute;
   display: flex;
 
-  left: 20%;
+  /* left: 20%; */
   padding: 40px;
   justify-content: center;
   z-index: 0;
-  width: 60%;
+  width: 100%;
   /* margin-top: 30px; */
   /* flex-basis: 80%; */
   /* background-color: #00996D; */
@@ -95,15 +131,24 @@ a.category-link:hover {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 95%;
+  width: 70%;
   height: 100%;
   background-color: white;
   opacity: 0.9;
   padding: 30px;
 }
 
+@media only screen and (max-width: 600px) {
+  .trans-white-conteiner {
+    width: 100%;
+    padding: 10%;
+    /* left: 0; */
+  }
+}
+
 .card {
   height: 20rem;
+  width: 14rem;
   margin: 20px;
   box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
