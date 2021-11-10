@@ -1,6 +1,13 @@
+html {
+  height: 100%;
+  position: relative;
+  top: 0;
+  bottom: 0;
+}
 
 body {
   background-color: #f9f9f9;
+  height: 100%;
 }
 
 .navbar-custom {
@@ -21,9 +28,9 @@ body {
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
 }
 
 .brand-name-top {
@@ -58,25 +65,59 @@ a.category-link:hover {
 .products {
   position: absolute;
   display: flex;
-  left: 10%;
-  padding: 40px;
-  justify-content: space-around;
-  z-index: -1;
-  width: 80%;
-  /* margin-top: 30px; */
-  flex-basis: 80%;
-  /* background-color: #00996D; */
-  height: 100%;
-  flex-wrap: wrap;
 
+  left: 20%;
+  padding: 40px;
+  justify-content: center;
+  z-index: 0;
+  width: 60%;
+  /* margin-top: 30px; */
+  /* flex-basis: 80%; */
+  /* background-color: #00996D; */
+  height: auto;
+  flex-wrap: wrap;
   background-color: #00996D;
-opacity: 0.8;
-background-image:  linear-gradient(135deg, #00b783 25%, transparent 25%), linear-gradient(225deg, #00b783 25%, transparent 25%), linear-gradient(45deg, #00b783 25%, transparent 25%), linear-gradient(315deg, #00b783 25%, #00996D 25%);
-background-position:  31px 0, 31px 0, 0 0, 0 0;
-background-size: 31px 31px;
-background-repeat: repeat;
+  opacity: 0.8;
+  background-image: linear-gradient(135deg, #00b783 25%, transparent 25%), linear-gradient(225deg, #00b783 25%, transparent 25%), linear-gradient(45deg, #00b783 25%, transparent 25%), linear-gradient(315deg, #00b783 25%, #00996D 25%);
+  background-position: 31px 0, 31px 0, 0 0, 0 0;
+  background-size: 31px 31px;
+  background-repeat: repeat;
 }
 
-.card-img-costum {
-  border-radius: 100%;
+@media only screen and (max-width: 600px) {
+  .products {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.trans-white-conteiner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.9;
+  padding: 30px;
+}
+
+.card {
+  height: 20rem;
+  margin: 20px;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  transition: 0.3s;
+}
+
+.card:hover {
+  color: #00BD9D;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card-img-top {
+  /* width: 100%; */
+  height: 50%;
+  object-fit:cover;
 }
