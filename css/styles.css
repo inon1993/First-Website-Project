@@ -83,7 +83,43 @@ span {
   background: -webkit-linear-gradient(#00996D, #1BF2CE, #08C7E5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* transition: 0.3s; */
+  /* animation: change 3.5s both infinite; */
+
+      /* height: 100px; */
+      /* background-color: black; */
+      -webkit-animation-name: blackWhite;
+      -webkit-animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-duration:13s;
 }
+
+@-webkit-keyframes blackWhite {
+  12.5% { background: -webkit-linear-gradient(#00996D, #1BF2CE, #08C7E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  37.5% { background: -webkit-linear-gradient(#FFB500, #ffe599, #f6b26b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  62.5% { background: -webkit-linear-gradient(#d9d2e9, #c90076, #674ea7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  87.5% { background: -webkit-linear-gradient(#990000, #f4cccc, #f44336);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+  100% { background: -webkit-linear-gradient(#00996D, #1BF2CE, #08C7E5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; }
+}
+
+/* @keyframes change {
+    from { background: -webkit-linear-gradient(#00996D, #1BF2CE, #08C7E5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+    to   { background: -webkit-linear-gradient(#FFB500, #ffe599, #f6b26b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+} */
 
 @media only screen and (max-width: 770px) {
   .banner-text {
@@ -133,13 +169,15 @@ span {
   flex-wrap: wrap;
   width: 70%;
   height: 100%;
-  background-color: white;
-  opacity: 0.9;
+  background:rgba(255,255,255, 0.9);
+  /* background-color: white; */
+  /* opacity: 0.9; */
   padding: 30px;
 }
 
 @media only screen and (max-width: 600px) {
   .trans-white-conteiner {
+    position: absolute;
     width: 100%;
     padding: 10%;
     /* left: 0; */
@@ -151,7 +189,7 @@ span {
   width: 14rem;
   margin: 20px;
   box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  /* transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow; */
   transition: 0.3s;
 }
 
@@ -165,4 +203,13 @@ span {
   /* width: 100%; */
   height: 50%;
   object-fit:cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    /* position: absolute; */
+    width: 85%;
+    /* padding: 10%; */
+    /* left: 0; */
+  }
 }
